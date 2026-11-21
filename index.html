@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101c23"><title>暮潮空域 · 高文出击</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app" data-state="menu">
+  <div id="world"></div><div id="canopy" hidden></div><div id="art"></div><div class="shade"></div>
+  <header class="topbar">
+    <div class="brand"><i class="crest"><b></b></i><span>DUSKTIDE<small>AIR OPERATIONS</small></span></div>
+    <div class="tools"><button id="audio" class="utility" title="切换声音" aria-label="切换声音"><span class="soundbars"><i></i><i></i><i></i><i></i></span><span id="soundText">声音开启</span></button><button id="fullscreen" class="utility square" title="切换全屏" aria-label="切换全屏"><i class="corners"></i></button></div>
+  </header>
+  <section id="menu">
+    <div class="brief">
+      <div class="kicker"><i></i>战役任务 <b>/</b> OPERATION 01</div>
+      <h1>暮潮空域</h1>
+      <div class="english">OPERATION DUSKTIDE</div>
+      <p>无人机编队已封锁东岬市中心。沿中央大道低空突入，<br>掠过高架车站，在街区上空击毁「长夜」指挥舰。</p>
+      <div class="actions"><button class="primary" id="deploy">开始出击 <span>⟶</span></button><button class="secondary" id="manualBtn">驾驶手册</button></div>
+      <span id="error" role="alert"></span>
+    </div>
+    <div class="caption"><span></span><div><small>HEAVY AIRFRAME</small><strong>高文 <em>/</em> GAWAIN</strong></div></div>
+    <footer class="briefFoot"><div><i class="statusdot"></i> 都市防空基地就绪</div><span>东岬中央商务区 <b>/</b> 黄昏</span></footer>
+  </section>
+  <section id="hud" aria-label="战斗仪表">
+    <div class="orders"><small id="phase"></small><strong id="objective"></strong><span id="progress"></span></div>
+    <div class="battleTools"><button id="viewBtn" title="切换视角">视角 V</button><button id="pauseBtn" title="暂停">暂停 Ⅱ</button></div>
+    <canvas id="instruments"></canvas>
+    <div class="notice"><strong id="notice"></strong><small id="subnotice"></small></div>
+    <div class="systems"><div class="stat"><label>机体装甲 <b id="hp"></b></label><i><u id="hpBar"></u></i></div><div class="stat"><label>推进能源 <b id="fuel"></b></label><i><u id="fuelBar"></u></i></div></div>
+    <div class="weapon"><small>肩部武装</small><strong>强子炮 <kbd>Q</kbd></strong><span id="beamStatus"></span></div>
+    <div class="hotkeys">空格 开火　·　R 追踪　·　Shift 加速　·　E 规避</div>
+    <div class="touchpad" id="stick"><i></i></div><div class="touchguns"><button id="tFire">开火</button><button id="tBeam">强子炮</button><button id="tDodge">规避</button><button id="tLock">追踪</button><button id="tBoost">加速</button></div>
+  </section>
+  <div id="veil" hidden><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle"><small id="dialogCode"></small><h2 id="dialogTitle"></h2><div id="dialogBody"></div><div id="dialogActions"></div></section></div>
+</main>
+<script src="assets/three.min.js"></script><script src="assets/sky.js"></script><script src="assets/windows.js"></script><script src="assets/shops.js"></script>
+<script src="models.js"></script><script src="streets.js"></script><script src="environment.js"></script><script src="game.js"></script>
+</body></html>
